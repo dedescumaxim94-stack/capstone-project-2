@@ -1,0 +1,94 @@
+:root {
+    /* Choose one of these schemes */
+    --bg-color: #cee7ff;
+    /* Light & Clean */
+    --text-main: #212529;
+
+    /* OR: Dark Mode Professional */
+    /* --bg-color: #0f172a; */
+    /* Deep Navy */
+    /* --text-main: #f1f5f9; */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    transition: background-color 0.3s ease;
+}
+
+h1, h2, h3, .display-4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+    /* Tighter letters look more professional for big titles */
+    font-weight: 800;
+}
+
+p, body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    /* Increased line height for professional spacing */
+}
+
+
+
+/*-----------------------Intro-----------------------*/
+
+.custom-jumbotron {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    /* Fallback color */
+}
+
+.custom-jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* Put your image and gradient here */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+        url('./images/Web_de_background.png');
+    background-size: cover;
+    background-position: center;
+
+    /* Apply the blur here */
+    filter: blur(1px);
+    transform: scale(1.1);
+    /* Prevents white edges caused by blur */
+    z-index: 1;
+}
+
+.custom-jumbotron>* {
+    position: relative;
+    z-index: 2;
+    /* Keeps your text and buttons on top of the blur */
+}
+
+/*-----------------------about me-----------------------*/
+
+
+
+/*-----------------------features-----------------------*/
+
+.service-card {
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent !important;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 3px solid #0d6efd !important;
+    /* Bootstrap Primary Color */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3) !important;
+}
+
+.icon-box i {
+    /* This assumes you are using Bootstrap Icons */
+    display: inline-block;
+    padding: 10px;
+    background: rgba(13, 110, 253, 0.1);
+    border-radius: 12px;
+}
